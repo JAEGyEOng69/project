@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<!--이 페이지는 사용자에게 보여지는 내용은 없음.
+    지금부터 하는 내용은 사실 사기에 가까움 왜 그런지 생각해 보세요
+-->
+
+<body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+    <script src="gesilib.js"></script>
+    <script>
+        // 넘어 온 값들
+        var v_title = request.getParameter("nm_title");
+        var v_writer = request.getParameter("nm_writer");
+        var v_level = request.getParameter("nm_level");
+        var v_cats = request.getParameterValues("nm_cat");
+        var v_content = request.getParameter("nm_content");
+        var v_arrTotal = [];
+        var v_pid = 1;  //없을 때 초기값 설정
+
+        if (localStorage.getItem(v_tblName)) {
+            v_arrTotal = JSON.parse(localStorage.getItem(v_tblName));
+            v_pid = v_arrTotal[v_arrTotal.length - 1].pid + 1;
+        }
+
+        var v_gul = {}; // 묶어주기 위한 빈 객체(name-space로 봐도 무방)
+        v_gul.pid = v_pid   // 고유키를 한 개 만들어 주고싶음.
+        v_gul.title = v_title;
+        v_gul.writer = v_writer;
+        v_gul.level = v_level;
+        v_gul.cats = v_cats;
+        v_gul.content = v_content;
+        v_arrTotal.push(v_gul);// v_gul객체를 v_arrTotal배열에 담음
+        localStorage.setItem(v_tblName, JSON.stringify(v_arrTotal));
+        // alert("등록이 완료되었습니다. 목록으로 갑니다.")
+        Swal.fire({
+            title: '등록 완료 했습니다.',
+            text: '할만해요?',
+
+        }).then((value) => {   
+            if(value){
+                location.replace("./list.html");
+            }
+            
+        });
+    </script>
+</body>

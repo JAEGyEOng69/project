@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>회원가입</title> 
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script> 
+    <script src="join.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+  </head> 
+  <div>
+    <form class="" action="mailto:2015270241@korea.ac.kr" method="post" onsubmit="return checked()"> 
+      <table align="center" bordercolor="#CCDDFF" border="1" cellspacing="0"> 
+        <tr> 
+          <th colspan="2" bgcolor="#CCDDFF">회원 기본 정보</th> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">아이디:</th> 
+          <td> 
+            <input type="text" name="my_id" value="" minlength="4" maxlength="12" size="15" pattern="[a-zA-Z0-9]{4,12}" title="4~12자의 영문 대소문자와 숫자로만 입력." required/> <!--patter으로 아이디 유효성 검사 minlength와 maxlength로 글자 수 제한--> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">비밀변호:</th> 
+          <td> 
+            <input type="password" id="pw" name="my_password" value="" minlength="4" maxlength="12" size="15" pattern="[a-zA-Z0-9]{4,12}" title="4~12자의 영문 대소문자와 숫자로만 입력."required/> <!--patter으로 비밀번호 유효성 검사 minlength와 maxlength로 글자 수 제한--> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">비밀번호확인:</th> 
+          <td> 
+            <input type="password" id="pw_cf" name="my_password_confirm" onkeyup="check_pw()" value="" maxlength="12" size="15" required> 
+            <span id="pw_check_msg"></span> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">메일주소:</th> 
+          <td> 
+            <input type="email" name="my_mail" value="" size="20" pattern="[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}" required> 예) id@domain.com  <!--patter으로 메일 유효성 검사 --> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">이름:</th> 
+          <td> 
+            <input type="text" name="my_name" value="" size="20" required> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th colspan="2" bgcolor="#CCDDFF">개인 신상 정보</th> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">주민등록번호:</th> 
+          <td> 
+            <input type="text" id="my_address1" name="my_address" value="" size="20" maxlength="6" pattern="[0-9]{6}" title="잘못입력하였습니다. 예)123456-1234567." required/> - 
+            <input type="password" id="my_address2" name="my_address" value="" size="20" maxlength="7" pattern="[0-9]{7}" title="잘못입력하였습니다. 예)123456-1234567." onkeyup="my_address_check()" required/> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">주소:</th> 
+          <td> 
+            <input type="text" id="postcode" placeholder="우편번호" readonly > 
+            <input type="button" id="postcode_button" onclick="open_Postcode()" value="우편번호 찾기"><br> 
+            <input type="text" id="road_address" placeholder="도로 주소" readonly><input type="text" id="address" placeholder="지번 주소"readonly><br> 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">생일:</th> 
+          <td> 
+            <input type="text" name="my_year" id="my_year" value="" size="4" maxlength="4" readonly>년 
+            <input type="text" name="my_month" id="my_month" value="" size="2" maxlength="2" readonly>월 
+            <input type="text" name="my_day" id="my_day" value="" size="2" maxlength="2" readonly>일 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">관심분야:</th> 
+          <td> 
+            <input type="checkbox" name="my_hobby" value="computer">컴퓨터 
+            <input type="checkbox" name="my_hobby" value="internet">인터넷 
+            <input type="checkbox" name="my_hobby" value="trip">여행 
+            <input type="checkbox" name="my_hobby" value="movie">영화감상 
+            <input type="checkbox" name="my_hobby" value="music">음악감상 
+          </td> 
+        </tr> 
+        <tr> 
+          <th bgcolor="#EEEEEE">자기소개:</th> 
+          <td> 
+            <textarea name="my_intro" rows="5" cols="50" style="resize: none;"></textarea> 
+          </td> 
+        </tr> 
+ 
+      </table> 
+      <div class="" align="center"> 
+        <br> 
+        <input type="submit" value="회원 가입"> 
+        <input type="reset"  value="다시 입력"> 
+      </div> 
+    </form> 
+    
+  </body> 
+</html>

@@ -1,0 +1,297 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+
+/* 전체선택자 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home{
+    text-align: center;
+}
+.abc {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/room2.jpg);
+    color: white;
+    font-family: abster;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* height는 100%로 하면 전체 백퍼센트 적용이 안된다. width는 상관 없다
+                      확실하게 적용될 수 있는 vh를 쓴다. */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/room2.jpg);
+}
+
+.jj{
+    font-family: abster;
+    text-align: center;
+    color: white;
+}
+.jaeg  {
+    width: 100%;
+    height: 100vh;
+    /* color: white; */
+    /* height는 100%로 하면 전체 백퍼센트 적용이 안된다. width는 상관 없다
+                      확실하게 적용될 수 있는 vh를 쓴다. */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/room2.jpg);
+}
+
+.nav1 {
+    color: white;
+}
+
+.container .header {
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1 a {
+    text-decoration: none;
+    color: white;
+    font-family: abster;
+
+}
+
+#new {
+    display: inline-block;
+    text-align: right;
+}
+
+.container .nav ul li {
+    display: inline-block;
+    text-align: right;
+    margin: 0 10px;
+    font-family: abster;
+}
+
+.container .nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.container .nav ul li a:hover {
+    color: #1fdfdf
+}
+
+.container .hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.container .hero h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p {
+    font-size: 22px;
+}
+
+.container .hero button {
+    background: none;
+    border: 2px solid darkseagreen;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+.container .hero button:hover {
+    background-color: darkslategray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.board_list_wrap {
+    padding: 50px;
+    width: 100%;
+    height: 100vh;
+    /* height는 100%로 하면 전체 백퍼센트 적용이 안된다. width는 상관 없다
+                      확실하게 적용될 수 있는 vh를 쓴다. */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/room2.jpg);
+}
+
+.board_list_head,
+.board_list_body .item {
+    padding: 10px 0;
+    font-size: 0;
+}
+
+.board_list_head {
+    border-top: 2px solid rgb(150, 27, 41);
+    border-bottom: 1px solid rgb(70, 7, 129);
+    color: white;
+    font-family: abster;
+}
+
+.board_list_body .item {
+    border-bottom: 1px solid #ccc;
+    color: white;
+    font-family: abster;
+}
+
+.board_list_head>div,
+.board_list_body .item>div {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-family: abster;
+}
+
+.board_list_head>div {
+    font-weight: 600;
+}
+
+.board_list .num {
+    width: 10%;
+    color: white;
+    font-family: abster;
+}
+
+.board_list .tit {
+    width: 55%;
+    color: white;
+    font-family: abster;
+}
+
+.board_list_body div.tit {
+    text-align: left;
+}
+
+.board_list_body div.tit a:hover {
+    text-decoration: underline;
+}
+
+.board_list .writer {
+    width: 10%;
+}
+
+.board_list .date {
+    width: 15%;
+}
+
+.board_list .view {
+    width: 10%;
+}
+
+/* paging */
+.paging {
+    margin-top: 30px;
+    text-align: center;
+    color: yellow;
+    font-family: abster;
+}
+
+.paging a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.paging a.bt {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    background-image: url(images/page_bt.png);
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    text-indent: -1000px;
+    overflow: hidden;
+}
+
+.paging a.bt:hover {
+    background-color: #999;
+}
+
+.paging a.first {
+    background-position: 10px -40px;
+}
+
+.paging a.prev {
+    margin-right: 5px;
+    background-position: 10px 10px;
+}
+
+.paging a.next {
+    margin-left: 5px;
+    background-position: -40px 10px;
+}
+
+.paging a.last {
+    background-position: -40px -40px;
+}
+
+.paging a.num {
+    margin: 0 5px;
+}
+
+.paging a.num.on {
+    color: green;
+}
+
+.paging a.num:hover {
+    text-decoration: underline;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.main {
+    width: 400px;
+    height: 400px;
+    left:50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.logo {
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+    font-family: abster;
+}
+
+#login {
+    width: 100%;
+    background-color: skyblue;
+    border-color: transparent;
+    color: white;
+}
+
+.account {
+    display: block;
+    margin-bottom: 3px;
+    padding: 3px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
